@@ -2,6 +2,7 @@ package com.example.questadvancelayout_086
 
 import android.R.attr.height
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -29,22 +30,30 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun ActivitasPertama(modifier: Modifier) {
-    Column(modifier = Modifier.padding(top=100.dp)
-        .fillMaxSize(),
+    Column(
+        modifier = Modifier
+            .padding(top = 100.dp)
+            .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(stringResource( R.string.prodi),
+        Text(
+            stringResource(R.string.prodi),
             fontSize = 35.sp,
-            fontWeight = FontWeight.Bold)
-        Text(stringResource( R.string.univ),
-            fontSize = 22.sp)
+            fontWeight = FontWeight.Bold
+        )
+        Text(
+            stringResource(R.string.univ),
+            fontSize = 22.sp
+        )
         Spacer(modifier = Modifier.height(25.dp))
-        Card(modifier = Modifier
-            .fillMaxWidth(1f)
-            .padding(12.dp),
+        Card(
+            modifier = Modifier
+                .fillMaxWidth(1f)
+                .padding(12.dp),
             colors = CardDefaults.cardColors(
                 containerColor = Color.DarkGray
-            )) {
+            )
+        ) {
             Row() {
                 val gambar = painterResource(R.drawable.logo)
                 Image(
@@ -59,21 +68,67 @@ fun ActivitasPertama(modifier: Modifier) {
                         fontSize = 30.sp,
                         fontFamily = FontFamily.Cursive,
                         color = Color.White,
-                        modifier = Modifier.padding(top=15.dp)
+                        modifier = Modifier.padding(top = 15.dp)
                     )
                     Text(
                         stringResource(R.string.alamat),
                         fontSize = 20.sp,
                         color = Color.Yellow,
-                        modifier = Modifier.padding(top=10.dp)
-
+                        modifier = Modifier.padding(top = 10.dp)
                     )
+                }
+            }
+        }
+        Column(modifier = Modifier
+            .fillMaxSize(),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+
+            Card(modifier = Modifier
+                .fillMaxWidth(1f)
+                .padding(12.dp),
+                colors = CardDefaults.cardColors(
+                    containerColor = Color.Blue
+                )) {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth(),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    val gambar = painterResource(R.drawable.logo)
+                    Image(
+                        painter = gambar,
+                        contentDescription = null,
+                        modifier = Modifier.size(100.dp).padding(5.dp)
+                    )
+                    Spacer(modifier = Modifier.width(30.dp))
+                    Column() {
+                        Text(
+                            stringResource(R.string.nama),
+                            fontSize = 30.sp,
+                            color = Color.White,
+                            modifier = Modifier.padding(top=15.dp)
+                        )
+                        Text(
+                            stringResource(R.string.nohp),
+                            fontSize = 20.sp,
+                            fontFamily = FontFamily.Serif,
+                            color = Color(0xFF4FC3F7),
+                            modifier = Modifier.padding(top=10.dp)
+                        )
+                        Text(
+                        stringResource(R.string.alamat),
+                            fontSize = 20.sp,
+                            color = Color.White,
+                            modifier = Modifier.padding(top=10.dp, bottom  = 15.dp)
+
+                        )
+
+                    }
 
                 }
 
             }
-
-        }
         Box(
             modifier = Modifier
                 .fillMaxSize()
@@ -86,4 +141,4 @@ fun ActivitasPertama(modifier: Modifier) {
             )
         }
     }
-}
+} }

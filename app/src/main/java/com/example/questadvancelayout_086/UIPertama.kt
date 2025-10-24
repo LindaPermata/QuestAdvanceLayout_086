@@ -1,5 +1,6 @@
 package com.example.questadvancelayout_086
 
+import android.R.attr.fontWeight
 import android.R.attr.height
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -106,6 +107,7 @@ fun ActivitasPertama(modifier: Modifier) {
                         Text(
                             stringResource(R.string.nama),
                             fontSize = 30.sp,
+                            fontWeight = FontWeight.Bold,
                             color = Color.White,
                             modifier = Modifier.padding(top=15.dp)
                         )
@@ -157,6 +159,7 @@ fun ActivitasPertama(modifier: Modifier) {
                             Text(
                                 stringResource(R.string.nama),
                                 fontSize = 30.sp,
+                                fontWeight = FontWeight.Bold,
                                 color = Color.White,
                                 modifier = Modifier.padding(top=15.dp)
                             )

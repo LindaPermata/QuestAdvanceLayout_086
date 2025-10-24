@@ -129,6 +129,58 @@ fun ActivitasPertama(modifier: Modifier) {
                 }
 
             }
+
+            Column(modifier = Modifier
+                .fillMaxSize(),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+
+                Card(modifier = Modifier
+                    .fillMaxWidth(1f)
+                    .padding(12.dp),
+                    colors = CardDefaults.cardColors(
+                        containerColor =  Color(0xFF006400)
+                    )) {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth(),
+                        verticalAlignment = Alignment.CenterVertically,
+                    ) {
+                        val gambar = painterResource(R.drawable.logo)
+                        Image(
+                            painter = gambar,
+                            contentDescription = null,
+                            modifier = Modifier.size(100.dp).padding(5.dp)
+                        )
+                        Spacer(modifier = Modifier.width(30.dp))
+                        Column() {
+                            Text(
+                                stringResource(R.string.nama),
+                                fontSize = 30.sp,
+                                color = Color.White,
+                                modifier = Modifier.padding(top=15.dp)
+                            )
+                            Text(
+                                stringResource(R.string.nohp),
+                                fontSize = 20.sp,
+                                fontFamily = FontFamily.Serif,
+                                color = Color(0xFF4FC3F7),
+                                modifier = Modifier.padding(top=10.dp)
+                            )
+                            Text(
+                                stringResource(R.string.alamat),
+                                fontSize = 20.sp,
+                                color = Color.White,
+                                modifier = Modifier.padding(top=10.dp, bottom  = 15.dp)
+
+                            )
+
+                        }
+
+                    }
+
+                }
+
         Box(
             modifier = Modifier
                 .fillMaxSize()
@@ -141,4 +193,4 @@ fun ActivitasPertama(modifier: Modifier) {
             )
         }
     }
-} }
+} }}
